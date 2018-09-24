@@ -26,8 +26,21 @@ def longest_palindromic_substring(word):
     return word[start:start+length]
 
 
+def dp(word, start=0, end=None):
+    if end is None:
+        end = len(word)
+
+    if start > end:
+        return 0, ''
+
+    if word[start:end] == word[start:end][::-1]:
+        return end - start, word[start:end]
+    return max(dp(word, start+1, end), dp(word, start, end-1))
+
+
 if __name__ == '__main__':
     for word in ['aabcdcb', 'bananas', 'google', 'a', 'abbacccad']:
-        print('Logest palindromic substring of {:10} is {}'.format(
+        print('Logest palindromic substring of "{:10}" is "{}"'.format(
             word, longest_palindromic_substring(word)
         ))
+        print(dp(word))
