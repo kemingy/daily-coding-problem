@@ -9,10 +9,10 @@
 def product_except_self(nums):
     n = len(nums)
     p = 1
-    output = []
+    output = [1] * n
 
     for i in range(n):
-        output.append(p)
+        output[i] *= p
         p *= nums[i]
 
     p = 1
