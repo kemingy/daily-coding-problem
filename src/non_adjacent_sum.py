@@ -17,5 +17,5 @@ def max_sum(array):
     return ans
 
 if __name__ == '__main__':
-    array = [2, 1, 4, 5, 8, 2]
-    print(max_sum(array))
+    for array in [[2, 1, 4, 5, 8, 2], [2, 4, 6, 2, 5], [5, 1, 1, 5]]:
+        print('Max non-adjacent number of {} is'.format(array), max_sum(array))
