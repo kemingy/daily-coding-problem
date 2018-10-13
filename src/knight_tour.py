@@ -30,5 +30,5 @@ def knight_tour(n):
 
 
 if __name__ == '__main__':
-    for i in range(3, 10):
+    for i in range(3, 8):
         knight_tour(i)
