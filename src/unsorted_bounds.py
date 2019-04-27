@@ -33,9 +33,7 @@ def unsorted_bounds(nums):
             right -= 1
         i -= 1
 
-    left = 0 if left < 0 else left + 1
-    right = n - 1 if right >= n else right - 1
-    return left, right
+    return left + 1, right - 1
 
 
 if __name__ == '__main__':
