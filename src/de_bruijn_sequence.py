@@ -35,10 +35,7 @@ def de_bruijn_sequence(chars, n):
         return [search(s, path+[s]) for s in map_out[string] if s not in path]
 
     search(substrings[0])
-    if not legal_path:
-        return ''
-    chosen = legal_path[0]
-    return ''.join([s[0] for s in chosen[1:]]) + chosen[0][0]
+    return ''.join([s[0] for s in legal_path[0]]) if legal_path else ''
 
 
 if __name__ == "__main__":
