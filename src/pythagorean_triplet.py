@@ -23,4 +23,4 @@ if __name__ == "__main__":
         [3, 12, 8, 5, 13],
         [100, 233, 456, 199],
     ]:
-        print(pythogorean_triplet(nums))
+        print(pythagorean_triplet(nums))
